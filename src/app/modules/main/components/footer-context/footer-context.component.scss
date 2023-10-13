@@ -1,0 +1,47 @@
+.content{
+    text-align: center;
+}
+.sections{
+    margin-top: 50px;
+}
+.social-icons{
+    display: flex;
+    column-gap: 15px;
+
+    img{
+        width: 30px;
+        height: 30px;
+    }
+}
+.subscriber{
+    
+    input{
+        height: 82px;
+        width: 470px;
+        text-indent: 20px;
+        outline: none;
+    }
+    button{
+        height: 80px;
+        width: 40px;
+        border: none;
+        position: relative;
+        left: -55px;
+        top: -1px;
+        background-color: transparent;  
+    }
+    img{
+        height: 20px;
+    }
+}
+.radio{
+    margin-bottom: 40px;
+    margin-top: 15px;
+    display: flex;
+    width: 37%;
+    font-size: 13px;
+    column-gap: 5px;
+    input{
+        height: 22px;
+    }
+}

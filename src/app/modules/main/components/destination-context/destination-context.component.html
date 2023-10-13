@@ -1,0 +1,18 @@
+<div class="align-self-center d-flex flex-column context " style="height: 600px;">
+    <div class="destintion-headline fw-bold"><h2>Our Destination</h2></div>
+      <div class="destintion mt-3">
+        <select class="form-select small-select" [(ngModel)]="destId" (change)="updateSelectedImage()">
+          <option *ngFor="let destination of destinations" [ngValue]="destination.id">{{destination.title}}</option>
+        </select>
+      </div>
+    <div class="flex-container mt-3">
+        <div class="relative"><img class="des-img" [src]="selectedDestination?.image" alt="Destination Image" *ngIf="selectedDestination">
+            <div class="map">
+                <img class="map-img" [src]="selectedDestination?.map" alt="Map Image" *ngIf="selectedDestination">
+        </div>
+        <div class="absolute"> <h5 class="card-title">{{selectedDestination?.title}}</h5>
+            <p class="card-text">{{selectedDestination?.description}}</p>
+            <a href="#" class="btn btn-discover"><i>Discover More</i></a></div>
+        </div>
+    </div>
+</div>

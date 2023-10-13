@@ -1,0 +1,73 @@
+<div class="slider">
+    <div class="arrow">
+        <img src="assets/prev.png" alt="left-arrow" id="left" (click)="owlCarousel.prev()">
+    </div>
+    <owl-carousel-o [options]="customOptions" class="custom-carousel" #owlCarousel>
+      <ng-container *ngFor="let slide of slidesStore">
+        <ng-template carouselSlide>
+          <div class="slider-content">
+            <div class="slider-image">
+              <img src="{{slide?.image}}" alt="slider-img">
+            </div>
+          </div>
+          <div class="title">
+            <h1>{{slide?.title}}</h1>
+            <h5>{{slide?.description}}</h5>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+    <div class="arrow">
+        <img src="assets/next.png" alt="right-arrow" id="right" (click)="owlCarousel.next()">
+    </div>
+</div>
+<div class="container-fluid booking-section">
+  <div class="container col-8 text-center">
+    <div class="row ">
+      <div class="col-4 section p-2">
+        <div class="item p-2 row">
+          <div class="first-date col-6">
+            <input class="date" type="date">
+          </div>
+          <div class="last-date col-6">
+            <input class="date" type="date">
+          </div>
+        </div>
+      </div>
+      <div class="col-4 section p-2">
+        <div class="item p-2 row ">
+          <div class="person-icon col-3">
+            <img class="person" src="assets/person.png" alt="">
+          </div>
+          <div class="room-selection col-3">
+            <select class="dropdown">
+              <option value="option1">1 Room, 1 Adult, 0 children</option>
+              <option value="option2">2 Room, 2 Adult, 2 children</option>
+              <option value="option3">4 Room, 4 Adult. 4 children</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 section p-2">
+        <div class="item p-2 row ">
+          <div class="tag-icon col-3">
+            <img class="person" src="assets/tag-icon.png" alt="">
+          </div>
+          <div class="code-selection col-3">
+            <select class="dropdown">
+              <option value="option1">Special code</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-1 section p-2">
+        <div class="item p-2 search-button">Search</div>
+      </div> 
+    </div>
+  </div>
+</div>
+
+
+
